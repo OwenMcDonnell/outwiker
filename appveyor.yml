@@ -4,7 +4,7 @@ image:
     - Ubuntu
 environment:
     PY_PYTHON: 3.6-32
-    PYTHONIOENCODING: utf_8
+    #PYTHONIOENCODING: utf_8
     PIPENV_IGNORE_VIRTUALENVS: 1
 stack: Python 3.5.5
 init:
