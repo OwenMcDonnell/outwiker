@@ -1,7 +1,7 @@
 version: 2.1.0.xxx.{build}
 image:
     - Visual Studio 2015
-    - Ubuntu
+    #- Ubuntu
 environment:
     PY_PYTHON: 3.6-32
     PYTHONIOENCODING: utf_8
@@ -13,7 +13,8 @@ init:
     - sh: python3 -m pip install --user pipenv
 install:
     - cmd: cinst innosetup
-    - cmd: py -m pipenv update --dev
+    #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+    - cmd: py -m pipenv update --dev -v
     - sh: pipenv run pip install -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython==4.0.1
     - sh: pipenv update --dev
 build_script:
