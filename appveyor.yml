@@ -1,7 +1,7 @@
 version: 2.1.0.xxx.{build}
 image:
     - Visual Studio 2015
-    - Ubuntu
+    #- Ubuntu
 environment:
     PY_PYTHON: 3.6-32
     PYTHONIOENCODING: utf-8
