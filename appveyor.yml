@@ -13,7 +13,6 @@ init:
     - sh: python3 -m pip install --user pipenv
 install:
     - cmd: cinst innosetup
-    #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
     - cmd: py -m pipenv update --dev -v
     - sh: pipenv run pip install -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython==4.0.1
     - sh: pipenv update --dev
